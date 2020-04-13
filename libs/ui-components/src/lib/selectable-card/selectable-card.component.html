@@ -1,1 +1,5 @@
-<p>selectable-card works!</p>
+<mat-card matRipple [matRippleCentered]="true"
+  [matRippleDisabled]="disabled" (click)="onCardClick($event)">
+  <ng-content select="mat-checkbox"></ng-content>
+  <ng-content></ng-content>
+</mat-card>

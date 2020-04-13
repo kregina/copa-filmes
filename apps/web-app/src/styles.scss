@@ -2,3 +2,20 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+@import '~angular-material-css-vars/main';
+
+// optional
+$mat-css-dark-theme-selector: '.isDarkTheme';
+$mat-css-light-theme-selector: '.isLightTheme';
+
+// init theme
+@include init-material-css-vars() {
+  // If your app has any theme mixins, call them here.
+  // $mat-css-theme gets set to an appropriate value before this content is called.
+  // @include your-custom-component-theme($mat-css-theme);
+};
+
+@include mat-css-set-palette-defaults($mat-light-blue, 'primary');
+@include mat-css-set-palette-defaults($mat-green, 'accent');
+@include mat-css-set-palette-defaults($mat-red, 'warn');

@@ -1,15 +1,41 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ContentChild, HostBinding, ViewEncapsulation, ElementRef, Optional, Inject } from '@angular/core';
+import { MatCheckbox, MAT_CHECKBOX_DEFAULT_OPTIONS, MatCheckboxDefaultOptions } from '@angular/material/checkbox';
 
 @Component({
-  selector: 'copa-filmes-selectable-card',
+  selector: 'ui-selectable-card',
   templateUrl: './selectable-card.component.html',
-  styleUrls: ['./selectable-card.component.scss']
+  styleUrls: ['./selectable-card.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
-export class SelectableCardComponent implements OnInit {
+export class SelectableCardComponent {
 
-  constructor() { }
+  @ContentChild(MatCheckbox) checkbox: MatCheckbox;
 
-  ngOnInit(): void {
+  @HostBinding('class')
+  get colorClass() {
+    return `mat-${this.checkbox?.color || this._options.color}`;
+  };
+
+  @HostBinding('class.ui-selectable-card') componentClass = true;
+
+  @HostBinding('class.selected')
+  get selected() {
+    return this.checkbox?.checked;
+  };
+
+  get disabled() {
+    return this.checkbox?.disabled;
   }
 
+  constructor(
+    @Optional() @Inject(MAT_CHECKBOX_DEFAULT_OPTIONS)
+    private _options?: MatCheckboxDefaultOptions
+  ) {}
+
+  onCardClick(e) {
+    if(!this.checkbox || e.target.firstElementChild?.type === 'checkbox') {
+      return;
+    }
+    this.checkbox.checked = !this.checkbox.checked;
+  }
 }

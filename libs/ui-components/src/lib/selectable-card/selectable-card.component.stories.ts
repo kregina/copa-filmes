@@ -1,15 +1,25 @@
+import { moduleMetadata, storiesOf } from '@storybook/angular';
 
-import { SelectableCardComponent } from './selectable-card.component';
+import { SelectableCardModule } from './selectable-card.module';
 
-export default {
-  title: 'SelectableCardComponent'
-}
 
-export const primary = () => ({
+storiesOf('SelectableCard', module).add('Default', () => ({
+  template: `
+    <div>
+    <ui-selectable-card>
+      <div class="mat-card-header-text">
+        <mat-checkbox></mat-checkbox>
+        <h2>Shiba Inu</h2>
+        <small>dooog</small>
+      </div>
+    </ui-selectable-card>
+    </div>
+  `,
+  styles: [
+    'div { max-width: 250px }',
+    'h2 { margin-bottom: 0 }'
+  ],
   moduleMetadata: {
-    imports: []
-  },
-  component: SelectableCardComponent,
-  props: {
+    imports: [SelectableCardModule]
   }
-})
+}));

@@ -1,0 +1,43 @@
+@import '~angular-material-css-vars/public-util';
+
+.ui-selectable-card {
+  cursor: pointer;
+
+  .mat-card {
+    margin: 20px;
+  }
+
+  &.selected {
+    &.mat-primary > .mat-card {
+      box-shadow: 0px 2px 3px 0px mat-css-color-primary();
+    }
+
+    &.mat-accent > .mat-card {
+      box-shadow: 0px 2px 3px 0px mat-css-color-accent();
+    }
+
+    &.mat-warn > .mat-card {
+      box-shadow: 0px 2px 3px 0px mat-css-color-warn();
+    }
+  }
+
+  .mat-checkbox .mat-checkbox-ripple {
+    opacity: 0;
+  }
+
+  &[class^="mat-"] .mat-ripple-element {
+    opacity: .4;
+  }
+
+  &.mat-primary .mat-ripple-element {
+    background: mat-css-color-primary();
+  }
+
+  &.mat-accent .mat-ripple-element {
+    background: mat-css-color-accent();
+  }
+
+  &.mat-warn .mat-ripple-element {
+    background: mat-css-color-warn();
+  }
+}

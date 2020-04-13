@@ -1,8 +1,8 @@
 {
   "extends": "../../tslint.json",
   "rules": {
-    "directive-selector": [true, "attribute", "copaFilmes", "camelCase"],
-    "component-selector": [true, "element", "copa-filmes", "kebab-case"]
+    "directive-selector": [true, "attribute", "ui", "camelCase"],
+    "component-selector": [true, "element", "ui", "kebab-case"]
   },
   "linterOptions": {
     "exclude": ["!**/*"]
