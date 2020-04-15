@@ -16,6 +16,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@copa-filmes/web-app": ["apps/web-app/src/"],
       "@copa-filmes/ui-components": ["libs/ui-components/src/index.ts"]
     }
   },
