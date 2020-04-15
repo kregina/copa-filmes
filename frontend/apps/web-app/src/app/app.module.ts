@@ -5,6 +5,7 @@ import { MaterialCssVarsModule } from 'angular-material-css-vars';
 
 import { AppRoutingRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ApiModule } from './core/api/api.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -14,7 +15,8 @@ import { AppComponent } from './app.component';
     MaterialCssVarsModule.forRoot({
       darkThemeClass: 'isDarkTheme'
     }),
-    AppRoutingRoutingModule
+    AppRoutingRoutingModule,
+    ApiModule
   ],
   providers: [],
   bootstrap: [AppComponent]
