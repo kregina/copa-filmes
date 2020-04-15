@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MaterialCssVarsService } from 'angular-material-css-vars';
 
 @Component({
   selector: 'copa-filmes-root',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'web-app';
+
+  constructor(public materialCssVarsService: MaterialCssVarsService){
+    this.materialCssVarsService.setDarkTheme(true);
+    this.materialCssVarsService.setPrimaryColor('#e91e63');
+    this.materialCssVarsService.setAccentColor('#69f0ae');
+    this.materialCssVarsService.setWarnColor('#f44336');
+  }
 }

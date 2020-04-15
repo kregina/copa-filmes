@@ -1,0 +1,32 @@
+@import '~angular-material-css-vars/public-util';
+
+mat-toolbar{
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  text-align: center;
+  padding: 3em 0;
+}
+
+.title {
+  h1 {
+    font-size: 1.5em;
+    margin: 0 0 .5em 0;
+  }
+
+  h3 {
+    font-size: 0.8em;
+    text-transform: uppercase;
+  }
+}
+
+.subtitle {
+  display: block;
+  font-size: .7em;
+}
+
+.mat-divider {
+  border-top-color: mat-css-color-accent();
+  border-top-width: 3px;
+  margin: 0 95px 20px;
+}
