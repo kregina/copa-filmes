@@ -1,16 +1,18 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-import { AppComponent } from './app.component';
+import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MaterialCssVarsModule} from 'angular-material-css-vars';
+import { MaterialCssVarsModule } from 'angular-material-css-vars';
+
+import { AppRoutingRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [AppComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MaterialCssVarsModule.forRoot()
+    MaterialCssVarsModule.forRoot(),
+    AppRoutingRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
