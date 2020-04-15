@@ -6,18 +6,17 @@ using System.Threading.Tasks;
 
 namespace CopaFilmes.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     [ApiController]
     public class FilmesController : ControllerBase
     {
         private readonly CopaFilmesApiService _service;
 
-        public FilmesController(CopaFilmesApiService service) 
+        public FilmesController(CopaFilmesApiService service)
         {
             _service = service;
         }
 
-        // GET: api/Filmes
         [HttpGet]
         public async Task<IEnumerable<Filme>> GetAsync()
         {

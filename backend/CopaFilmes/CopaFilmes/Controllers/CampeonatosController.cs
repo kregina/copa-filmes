@@ -8,11 +8,10 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CopaFilmes.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     [ApiController]
     public class CampeonatosController : ControllerBase
     {
-        // POST: api/Campeonatos
         [HttpPost]
         public IEnumerable<Filme> Post(CriarCampeonato comando)
         {

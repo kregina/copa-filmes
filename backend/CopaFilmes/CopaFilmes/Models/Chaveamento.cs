@@ -10,33 +10,32 @@ namespace CopaFilmes.Models
         {
             var quantidadeItems = items.Count();
 
-            if(quantidadeItems % 2 != 0)
+            if (quantidadeItems % 2 != 0)
             {
-                throw new ArgumentException("A quantidade de itens deve ser um número par");
+                throw new ArgumentException("A quantidade de itens deve ser um número par.");
             }
 
             var quantidadeCombinacoes = quantidadeItems / 2;
 
             var chaveA = Enumerable.Range(0, quantidadeCombinacoes);
-            var chaveB = chaveA.Select(i => quantidadeItems = i - 1);
+            var chaveB = chaveA.Select(i => quantidadeItems - i - 1);
 
             var itensChaveA = chaveA.Select(i => items.ElementAt(i));
             var itensChaveB = chaveB.Select(i => items.ElementAt(i));
 
             return itensChaveA.Zip(itensChaveB);
-
         }
 
         public static IEnumerable<(T Primeiro, T Segundo)> PrimeiroComSegundo<T>(this IEnumerable<T> itens)
         {
-            var quantidadeItens = itens.Count();
+            var quantidadeItems = itens.Count();
 
-            if(quantidadeItens % 2 != 0)
+            if (quantidadeItems % 2 != 0)
             {
                 throw new ArgumentException("A quantidade de itens deve ser um número par.");
             }
 
-            var quantidadeCombinacoes = quantidadeItens / 2;
+            var quantidadeCombinacoes = quantidadeItems / 2;
 
             var chaveA = Enumerable.Range(0, quantidadeCombinacoes).Select(i => i * 2);
             var chaveB = chaveA.Select(i => i + 1);
@@ -45,7 +44,6 @@ namespace CopaFilmes.Models
             var itensChaveB = chaveB.Select(i => itens.ElementAt(i));
 
             return itensChaveA.Zip(itensChaveB);
-
         }
     }
 }

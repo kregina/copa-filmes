@@ -12,8 +12,8 @@ namespace CopaFilmes.Models
         public Partida(params Filme[] filmes)
         {
             Resultado = filmes
-                .OrderBy(filme => filme.Nota)
-                .ThenBy(filme => filme.Titulo);
+                .OrderByDescending(f => f.Nota)
+                .ThenBy(f => f.Titulo);
         }
     }
 }

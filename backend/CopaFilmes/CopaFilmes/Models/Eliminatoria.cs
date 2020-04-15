@@ -6,7 +6,7 @@ namespace CopaFilmes.Models
     public class Eliminatoria
     {
         public IEnumerable<Partida> Partidas { get; private set; }
-        public IEnumerable<Filme> Vencedores => Partidas.Select(partida => partida.Vencedor);
+        public IEnumerable<Filme> Vencedores => Partidas.Select(p => p.Vencedor);
 
         private Eliminatoria(IEnumerable<Partida> partidas)
         {
@@ -28,6 +28,5 @@ namespace CopaFilmes.Models
 
             return new Eliminatoria(partidas);
         }
-
     }
 }
