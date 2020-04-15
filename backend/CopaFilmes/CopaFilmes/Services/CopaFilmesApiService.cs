@@ -14,7 +14,7 @@ namespace CopaFilmes.Services
 
         public CopaFilmesApiService(HttpClient client)
         {
-            client.BaseAddress = new Uri("http://copafilmes.azurewebsites.net/api/filmes");
+            client.BaseAddress = new Uri("http://copafilmes.azurewebsites.net/api/");
             Client = client;
         }
 
@@ -23,7 +23,8 @@ namespace CopaFilmes.Services
             var response = await Client.GetAsync("filmes");
             response.EnsureSuccessStatusCode();
             using var responseStream = await response.Content.ReadAsStreamAsync();
-            return await JsonSerializer.DeserializeAsync<IEnumerable<Filme>>(responseStream);
+            return await JsonSerializer.DeserializeAsync<IEnumerable<Filme>>(responseStream, 
+                new JsonSerializerOptions { PropertyNamingPolicy = JsonNamingPolicy.CamelCase});
         }
     }
 }
