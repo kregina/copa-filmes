@@ -1,0 +1,13 @@
+C:\Users\kelly\Projects\copa-filmes\backend\CopaFilmes\CopaFilmes\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Users\kelly\Projects\copa-filmes\backend\CopaFilmes\CopaFilmes\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\kelly\Projects\copa-filmes\backend\CopaFilmes\CopaFilmes\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+C:\Users\kelly\Projects\copa-filmes\backend\CopaFilmes\CopaFilmes\bin\Debug\netcoreapp3.1\CopaFilmes.exe
+C:\Users\kelly\Projects\copa-filmes\backend\CopaFilmes\CopaFilmes\obj\Debug\netcoreapp3.1\CopaFilmes.csprojAssemblyReference.cache
+C:\Users\kelly\Projects\copa-filmes\backend\CopaFilmes\CopaFilmes\obj\Debug\netcoreapp3.1\CopaFilmes.AssemblyInfoInputs.cache
+C:\Users\kelly\Projects\copa-filmes\backend\CopaFilmes\CopaFilmes\obj\Debug\netcoreapp3.1\CopaFilmes.AssemblyInfo.cs
+C:\Users\kelly\Projects\copa-filmes\backend\CopaFilmes\CopaFilmes\obj\Debug\netcoreapp3.1\CopaFilmes.RazorTargetAssemblyInfo.cache
+C:\Users\kelly\Projects\copa-filmes\backend\CopaFilmes\CopaFilmes\obj\Debug\netcoreapp3.1\staticwebassets\CopaFilmes.StaticWebAssets.Manifest.cache
+C:\Users\kelly\Projects\copa-filmes\backend\CopaFilmes\CopaFilmes\obj\Debug\netcoreapp3.1\staticwebassets\CopaFilmes.StaticWebAssets.xml
+C:\Users\kelly\Projects\copa-filmes\backend\CopaFilmes\CopaFilmes\obj\Debug\netcoreapp3.1\CopaFilmes.csproj.CoreCompileInputs.cache
+C:\Users\kelly\Projects\copa-filmes\backend\CopaFilmes\CopaFilmes\obj\Debug\netcoreapp3.1\CopaFilmes.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\kelly\Projects\copa-filmes\backend\CopaFilmes\CopaFilmes\obj\Debug\netcoreapp3.1\CopaFilmes.MvcApplicationPartsAssemblyInfo.cache
