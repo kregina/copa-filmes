@@ -5,6 +5,13 @@
 
   .mat-card {
     margin: 20px;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+  }
+
+  .mat-card-subtitle {
+    margin: 0;
   }
 
   &.selected {

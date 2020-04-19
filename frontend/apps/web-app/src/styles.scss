@@ -16,6 +16,3 @@ $mat-css-light-theme-selector: '.isLightTheme';
   // @include your-custom-component-theme($mat-css-theme);
 };
 
-@include mat-css-set-palette-defaults($mat-light-blue, 'primary');
-@include mat-css-set-palette-defaults($mat-green, 'accent');
-@include mat-css-set-palette-defaults($mat-red, 'warn');

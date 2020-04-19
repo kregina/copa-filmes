@@ -11,9 +11,12 @@ import { Filme, FilmesService } from '../core/api';
 export class HomeComponent implements OnInit {
   $filmes: Observable<Filme[]> = this.filmesService.get();
 
+  selected: number;
+
   constructor(private filmesService: FilmesService) { }
 
   ngOnInit(): void {
+    this.selected = 3;
   }
 
 }

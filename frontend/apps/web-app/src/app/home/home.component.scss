@@ -1,0 +1,32 @@
+@import '~angular-material-css-vars/public-util';
+
+.container {
+  padding: 30px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.mat-toolbar {
+  padding: 0 50px;
+  display: flex;
+  justify-content: space-between;
+
+  p {
+    margin: 0;
+
+    span {
+      border-bottom: solid 2px mat-css-color-accent(500);
+    }
+  }
+}
+
+.mat-flat-button.mat-accent,
+.mat-raised-button.mat-accent,
+.mat-fab.mat-accent,
+.mat-mini-fab.mat-accent {
+  color: #fff;
+  text-transform: uppercase;
+}

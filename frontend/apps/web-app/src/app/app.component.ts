@@ -9,9 +9,8 @@ import { MaterialCssVarsService } from 'angular-material-css-vars';
 export class AppComponent {
 
   constructor(public materialCssVarsService: MaterialCssVarsService){
-    this.materialCssVarsService.setDarkTheme(true);
     this.materialCssVarsService.setPrimaryColor('#e91e63');
-    this.materialCssVarsService.setAccentColor('#69f0ae');
+    this.materialCssVarsService.setAccentColor('#4CAF50');
     this.materialCssVarsService.setWarnColor('#f44336');
   }
 }

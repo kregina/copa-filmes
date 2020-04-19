@@ -12,9 +12,7 @@ import { ApiModule } from './core/api/api.module';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MaterialCssVarsModule.forRoot({
-      darkThemeClass: 'isDarkTheme'
-    }),
+    MaterialCssVarsModule.forRoot(),
     AppRoutingRoutingModule,
     ApiModule
   ],
