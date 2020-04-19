@@ -10,7 +10,6 @@ namespace CopaFilmes
 {
     public class Startup
     {
-        readonly string CustomOrigins = "_customOrigins";
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -23,11 +22,11 @@ namespace CopaFilmes
         {
             services.AddCors(options =>
             {
-                options.AddPolicy(name: CustomOrigins,
-                    builder => 
-                    {
-                        builder.WithOrigins("http://localhost:4200");
-                    });
+                options.AddDefaultPolicy(builder => 
+                {
+                    builder.WithOrigins("http://localhost:4200")
+                           .AllowAnyHeader();
+                });
             });
 
             services.AddControllers()
@@ -52,7 +51,7 @@ namespace CopaFilmes
 
             app.UseRouting();
 
-            app.UseCors(CustomOrigins);
+            app.UseCors();
 
             app.UseAuthorization();
 
