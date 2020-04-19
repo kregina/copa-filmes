@@ -1,5 +1,6 @@
 import { Component, OnInit, ContentChild, HostBinding, ViewEncapsulation, ElementRef, Optional, Inject } from '@angular/core';
 import { MatCheckbox, MAT_CHECKBOX_DEFAULT_OPTIONS, MatCheckboxDefaultOptions } from '@angular/material/checkbox';
+import {MatCheckboxHarness} from '@angular/material/checkbox/testing';
 
 @Component({
   selector: 'ui-selectable-card',
@@ -32,10 +33,10 @@ export class SelectableCardComponent {
     private _options?: MatCheckboxDefaultOptions
   ) {}
 
-  onCardClick(e) {
+  async onCardClick(e) {
     if(!this.checkbox || e.target.firstElementChild?.type === 'checkbox') {
       return;
     }
-    this.checkbox.checked = !this.checkbox.checked;
+    await this.checkbox._inputElement.nativeElement.click();
   }
 }

@@ -8,14 +8,15 @@ import { SelectableCardModule } from '@copa-filmes/ui-components';
 
 import { HeaderComponent } from './header/header.component';
 import { LoadingComponent } from './loading/loading.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [HeaderComponent, LoadingComponent],
   imports: [
     CommonModule,
-    MatToolbarModule,
     MatDividerModule,
     MatProgressSpinnerModule,
+    MatToolbarModule,
     MatButtonModule
   ],
   exports: [
@@ -25,7 +26,7 @@ import { LoadingComponent } from './loading/loading.component';
     MatDividerModule,
     SelectableCardModule,
     MatProgressSpinnerModule,
-    MatButtonModule
+    MatButtonModule,
   ]
 })
 export class SharedModule { }

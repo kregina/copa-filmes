@@ -8,10 +8,12 @@
     <div>
       <p>Selecionados</p>
       <p>
-        <span>{{selected}}</span> de <span>8</span> filmes
+        <span>{{selection.size}}</span> de <span>8</span> filmes
       </p>
     </div>
-    <button mat-raised-button color="accent">Gerar meu campeonato</button>
+    <button mat-raised-button color="accent"
+      (click)="gerarCampeonato()"
+      [disabled]="!selecaoValida()">Gerar meu campeonato</button>
   </mat-toolbar>
 
   <div class="container">
@@ -19,7 +21,9 @@
       <ui-selectable-card *ngFor="let filme of filmes">
         <mat-card-header>
           <div mat-card-avatar>
-            <mat-checkbox></mat-checkbox>
+            <mat-checkbox
+              (change)="toggleSelection(filme)"
+              [checked]="isSelected(filme)"></mat-checkbox>
           </div>
           <mat-card-title>{{filme.titulo}}</mat-card-title>
           <mat-card-subtitle>{{filme.ano}}</mat-card-subtitle>
