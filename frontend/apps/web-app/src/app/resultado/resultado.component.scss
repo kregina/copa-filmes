@@ -1,0 +1,36 @@
+@import '~angular-material-css-vars/public-util';
+
+.container {
+  padding: 30px;
+}
+
+.mat-card {
+  padding: 0;
+
+  .info {
+    background: mat-css-color-primary(500);
+    border-radius: initial;
+    color: #fff;
+    font-size: 4em;
+    height: auto;
+    line-height: 1em;
+    padding: 25px 20px;
+    width: auto;
+  }
+
+  ::ng-deep .mat-card-header-text {
+      margin: 0 16px;
+      display: flex;
+      align-items: center;
+  }
+
+  & + .mat-card {
+    margin-top: 20px;
+  }
+
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+}

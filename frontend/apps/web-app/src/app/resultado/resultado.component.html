@@ -1,1 +1,21 @@
-<p>resultado works!</p>
+<copa-filmes-header
+  title="Resultado Final"
+  subtitle="Veja o resultado final do Campeonato de filmes de forma simples e rápida.">
+</copa-filmes-header>
+
+<div class="container">
+  <ng-container *ngIf="resultado">
+    <mat-card *ngFor="let filme of resultado; let i = index">
+      <mat-card-header>
+        <div mat-card-avatar class="info">{{i + 1}}°</div>
+        <mat-card-title class="header-text">{{filme.titulo}}</mat-card-title>
+      </mat-card-header>
+    </mat-card>
+  </ng-container>
+</div>
+
+<div class="button-container">
+  <a mat-raised-button
+    [routerLink]="['/selecao']"
+    color="accent">{{resultado ? 'Voltar' : 'Ir'}} para seleção</a>
+</div>

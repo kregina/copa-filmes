@@ -1,6 +1,7 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
 
+import { SharedModule } from '../shared/shared.module';
 import { ResultadoRoutingModule } from './resultado-routing.module';
 import { ResultadoComponent } from './resultado.component';
 
@@ -9,7 +10,8 @@ import { ResultadoComponent } from './resultado.component';
   declarations: [ResultadoComponent],
   imports: [
     CommonModule,
-    ResultadoRoutingModule
+    ResultadoRoutingModule,
+    SharedModule
   ]
 })
 export class ResultadoModule { }
