@@ -10,7 +10,7 @@ export class AppComponent {
 
   constructor(public materialCssVarsService: MaterialCssVarsService){
     this.materialCssVarsService.setPrimaryColor('#e91e63');
-    this.materialCssVarsService.setAccentColor('#4CAF50');
+    this.materialCssVarsService.setAccentColor('#4caf50');
     this.materialCssVarsService.setWarnColor('#f44336');
   }
 }

@@ -1,24 +1,47 @@
 @import '~angular-material-css-vars/public-util';
 
 .container {
-  padding: 30px;
+  padding: 2rem;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-gap: 2rem;
 }
 
 .mat-toolbar {
-  padding: 0 50px;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1;
 
   p {
     margin: 0;
-
+    text-align: center;
     span {
       border-bottom: solid 2px mat-css-color-accent(500);
     }
+  }
+}
+
+.mat-toolbar-row, .mat-toolbar-single-row {
+  height: auto;
+}
+
+button {
+  margin-top: 15px;
+}
+
+@media (min-width: 599px) {
+  .mat-toolbar {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  button {
+    margin-top: 0;
   }
 }

@@ -1,32 +1,48 @@
 @import '~angular-material-css-vars/public-util';
 
-mat-toolbar{
+header{
+  background: mat-css-color-primary();
   display: flex;
   flex-direction: column;
   height: auto;
   text-align: center;
-  padding: 3em 0;
+  padding: 2rem;
 }
 
 .title {
   h1 {
-    font-size: 1.5em;
+    font-size: 2em;
+    font-weight: 700;
+    color: #fff;
     margin: 0 0 .5em 0;
   }
 
   h3 {
-    font-size: 0.8em;
+    color: #fff;
+    font-size: 1.2em;
     text-transform: uppercase;
   }
 }
 
 .subtitle {
+  color: #fff;
   display: block;
-  font-size: .7em;
+  font-size: 1em;
 }
 
 .mat-divider {
   border-top-color: mat-css-color-accent();
   border-top-width: 3px;
-  margin: 0 95px 20px;
+  margin: 0 38.5vw 20px;
+}
+
+@media (min-width: 599px) {
+  .subtitle {
+    margin: 0 auto;
+    width: 35vw;
+  }
+
+  .mat-divider {
+    margin: 0 46.5vw 20px;
+  }
 }

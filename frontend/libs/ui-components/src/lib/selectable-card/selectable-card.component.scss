@@ -1,13 +1,18 @@
 @import '~angular-material-css-vars/public-util';
 
+$contrast: mat-css-color-primary();
+
 .ui-selectable-card {
   cursor: pointer;
 
   .mat-card {
-    margin: 20px;
     min-height: 80px;
     display: flex;
     align-items: center;
+
+    &:focus, &:focus-within, &:hover {
+      background-color: mat-css-contrast-color(300, .04);
+    }
   }
 
   .mat-card-subtitle {
@@ -48,3 +53,4 @@
     background: mat-css-color-warn();
   }
 }
+
