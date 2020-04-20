@@ -23,7 +23,7 @@ Uma aplicação que realiza o campeonato entre 8 filmes selecionados pelo usuár
 - [Angular](https://angular.io/)
 - [Angular CLI](https://cli.angular.io/)
 - [Angular Material](https://material.angular.io/)
-- [CSS Varibles para Angular Material](hhttps://github.com/johannesjo/angular-material-css-vars)
+- [CSS Varibles para Angular Material](https://github.com/johannesjo/angular-material-css-vars)
 - [TypeScript](https://www.typescriptlang.org/)
 - [Rxjs](https://github.com/ReactiveX/rxjs)
 - [Sass](http://sass-lang.com/)
